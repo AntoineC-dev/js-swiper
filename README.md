@@ -2,7 +2,7 @@
 
 This project is a typescript image slider.[^1]
 
-It was created with [vite](https://vitejs.dev/)
+It was created with a [Vite development environment](https://vitejs.dev/)
 
 [^1]: Feel free to share any suggestion to improve the code.
 
