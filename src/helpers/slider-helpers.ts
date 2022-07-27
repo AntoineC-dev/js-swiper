@@ -7,7 +7,7 @@ import {
   sliderConfig,
 } from "../config";
 
-// ---- GENERAL ---- //
+// ---- NAVIGATION ---- //
 
 function removeDisabledAttributes(elements: NodeListOf<Element> | Element[]) {
   elements.forEach((element) => element.removeAttribute("disabled"));
@@ -16,6 +16,8 @@ function removeDisabledAttributes(elements: NodeListOf<Element> | Element[]) {
 function addDisabledAttribute(element: Element) {
   element.setAttribute("disabled", "true");
 }
+
+// ---- GENERAL ---- //
 
 export function updateSliderPosition() {
   const { currentIndex, lastIndex, slideWidth } = sliderConfig;
