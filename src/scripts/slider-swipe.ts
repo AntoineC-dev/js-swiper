@@ -1,4 +1,4 @@
-import { innerSlider, sliderConfig, SWIPER_THRESHOLD } from "../config";
+import { innerSlider, sliderConfig } from "../config";
 import {
   getCurrentPagination,
   getCurrentXCoordonate,
@@ -31,7 +31,7 @@ export function initializeSwipe() {
     const tmpStep = distX / sliderConfig.slideWidth;
     const direction: GetNewIndexOptions["direction"] = tmpStep < 0 ? "forward" : "backward";
     const tmpRest = Math.abs(tmpStep - Math.trunc(tmpStep));
-    const step = tmpRest > SWIPER_THRESHOLD ? Math.ceil(Math.abs(tmpStep)) : Math.floor(Math.abs(tmpStep));
+    const step = tmpRest > sliderConfig.swiperThreshold ? Math.ceil(Math.abs(tmpStep)) : Math.floor(Math.abs(tmpStep));
     sliderConfig.currentIndex = getNewIndex({ direction, step: Math.abs(step) });
     updateSliderPosition();
     if (Math.abs(step) !== 0) {

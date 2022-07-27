@@ -1,4 +1,12 @@
-import { innerSlider, slider, sliderConfig, SLIDER_SPACING, slides } from "../config";
+import {
+  innerSlider,
+  slider,
+  sliderConfig,
+  SLIDER_SPACING,
+  slides,
+  SWIPER_THRESHOLD_DESKTOP,
+  SWIPER_THRESHOLD_MOBILE,
+} from "../config";
 import { updateSliderPosition } from "../helpers";
 
 export const initializeSlider = new Promise<void>((resolve) => {
@@ -20,6 +28,11 @@ export const initializeSlider = new Promise<void>((resolve) => {
 
   sliderResizeObserver.observe(slider);
   innerSlider.addEventListener("transitionend", () => (sliderConfig.isMoving = false));
+
+  // Update swiper threshold on window resize
+  window.addEventListener("resize", () => {
+    sliderConfig.swiperThreshold = window.innerWidth < 768 ? SWIPER_THRESHOLD_MOBILE : SWIPER_THRESHOLD_DESKTOP;
+  });
 
   function finish() {
     clearInterval(interval);

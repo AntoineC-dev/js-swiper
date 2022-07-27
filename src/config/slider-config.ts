@@ -12,7 +12,8 @@ export const SLIDER_SPACING = 16;
 export const PAGINATION_ACTIVE_CLASS = "pagination-active";
 export const PAGINATION_ACTIVE_COLOR = "bg-zinc-700";
 export const PAGINATION_DEFAULT_COLOR = "bg-zinc-200";
-export const SWIPER_THRESHOLD = 0.25;
+export const SWIPER_THRESHOLD_MOBILE = 0.2;
+export const SWIPER_THRESHOLD_DESKTOP = 0.4;
 
 // Config
 export type SliderConfigType = {
@@ -24,6 +25,7 @@ export type SliderConfigType = {
   slideWidth: number;
   offsetLeft: number;
   maxOffsetLeft: number;
+  swiperThreshold: number;
 };
 
 export let sliderConfig: SliderConfigType = {
@@ -35,4 +37,5 @@ export let sliderConfig: SliderConfigType = {
   slideWidth: slides[0].clientWidth,
   offsetLeft: 0,
   maxOffsetLeft: 0,
+  swiperThreshold: window.innerWidth < 768 ? SWIPER_THRESHOLD_MOBILE : SWIPER_THRESHOLD_DESKTOP,
 };
