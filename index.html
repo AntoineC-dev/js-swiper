@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js Slider</title>
   </head>
-  <body class="min-h-screen bg-zinc-700 text-zinc-50 relative">
+  <body class="min-h-screen bg-zinc-700 text-zinc-50 relative flex flex-col">
     <!-- Loading screen:start -->
     <div data-loading-screen class="bg-zinc-800 z-50 absolute inset-0 flex flex-col gap-4 justify-center items-center">
       <p class="text-xl font-semibold">The app will start soon...</p>
@@ -16,8 +16,7 @@
         width="48"
         height="48"
         fill="currentColor"
-        viewBox="0 0 256 256"
-      >
+        viewBox="0 0 256 256">
         <rect width="256" height="256" fill="none"></rect>
         <line
           x1="128"
@@ -28,8 +27,7 @@
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="24"
-        ></line>
+          stroke-width="24"></line>
         <line
           x1="224"
           y1="128"
@@ -39,8 +37,7 @@
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="24"
-        ></line>
+          stroke-width="24"></line>
         <line
           x1="195.9"
           y1="195.9"
@@ -50,8 +47,7 @@
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="24"
-        ></line>
+          stroke-width="24"></line>
         <line
           x1="128"
           y1="224"
@@ -61,8 +57,7 @@
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="24"
-        ></line>
+          stroke-width="24"></line>
         <line
           x1="60.1"
           y1="195.9"
@@ -72,8 +67,7 @@
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="24"
-        ></line>
+          stroke-width="24"></line>
         <line
           x1="32"
           y1="128"
@@ -83,8 +77,7 @@
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="24"
-        ></line>
+          stroke-width="24"></line>
         <line
           x1="60.1"
           y1="60.1"
@@ -94,57 +87,16 @@
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="24"
-        ></line>
+          stroke-width="24"></line>
       </svg>
     </div>
     <!-- Loading screen:end -->
     <!-- Header:start -->
     <header class="bg-zinc-800">
-      <div class="container flex justify-between p-4 items-center">
-        <h1 class="text-2xl font-bold tracking-wide">JS Slider</h1>
-        <button type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 256 256">
-            <rect width="256" height="256" fill="none"></rect>
-            <line
-              x1="40"
-              y1="128"
-              x2="216"
-              y2="128"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="24"
-            ></line>
-            <line
-              x1="40"
-              y1="64"
-              x2="216"
-              y2="64"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="24"
-            ></line>
-            <line
-              x1="40"
-              y1="192"
-              x2="216"
-              y2="192"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="24"
-            ></line>
-          </svg>
-        </button>
-      </div>
+      <h1 class="p-4 text-center text-2xl font-bold tracking-wide">JS Slider</h1>
     </header>
     <!-- Header:end -->
-    <main class="w-full my-8 xs:my-16 space-y-8 xs:space-y-16 overflow-hidden">
+    <main class="w-full my-8 xs:my-16 space-y-8 xs:space-y-16 overflow-hidden flex-grow flex items-center">
       <!-- Slider:start -->
       <div data-slider class="relative container">
         <ul data-inner-slider class="w-full flex px-2 cursor-grab transition-transform duration-150 lg:duration-300">
@@ -184,8 +136,7 @@
           data-slider-btn
           id="prev-slide-btn"
           class="absolute z-10 left-6 top-1/2 -translate-y-1/2 p-2 rounded-md text-zinc-700 bg-zinc-50/50 disabled:text-zinc-700/40"
-          disabled
-        >
+          disabled>
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 256 256">
             <rect width="256" height="256" fill="none"></rect>
             <polyline
@@ -194,15 +145,13 @@
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="24"
-            ></polyline>
+              stroke-width="24"></polyline>
           </svg>
         </button>
         <button
           data-slider-btn
           id="next-slide-btn"
-          class="absolute z-10 right-6 top-1/2 -translate-y-1/2 p-2 rounded-md text-zinc-700 bg-zinc-50/50 disabled:text-zinc-700/40"
-        >
+          class="absolute z-10 right-6 top-1/2 -translate-y-1/2 p-2 rounded-md text-zinc-700 bg-zinc-50/50 disabled:text-zinc-700/40">
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 256 256">
             <rect width="256" height="256" fill="none"></rect>
             <polyline
@@ -211,16 +160,14 @@
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="24"
-            ></polyline>
+              stroke-width="24"></polyline>
           </svg>
         </button>
         <!-- Navigation:end -->
         <!-- Pagination:start -->
         <div
           data-slider-pagination
-          class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex justify-center items-center gap-2 p-4 bg-zinc-50/50 w-fit rounded-md"
-        ></div>
+          class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex justify-center items-center gap-2 p-4 bg-zinc-50/50 w-fit rounded-md"></div>
         <!-- Pagination:end -->
       </div>
       <!-- Slider:end -->
